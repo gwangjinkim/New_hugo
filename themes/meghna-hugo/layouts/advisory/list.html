@@ -16,8 +16,10 @@
 
       {{ range .Pages.ByWeight }}
       <!-- team member -->
-      <div class="col-lg-3 col-md-6 col-12 wow fadeInDown" data-wow-duration="500ms">
+      <div class="col-lg-3 col-md-6 col-12 wow fadeInDown d-flex" data-wow-duration="500ms">
         <div class="team-member">
+
+          <!-- 1. Child -->
           <div class="member-photo">
             <!-- member photo -->
             <a href="{{ .Permalink }}">
@@ -33,6 +35,7 @@
             </div>
           </div>
 
+          <!-- 2. Child -->
           <!-- member name & designation -->
           <div class="member-meta">
             <h4 class="mb-0"><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
@@ -40,11 +43,15 @@
             <p>
               {{ .Summary | truncate 150 }}
             </p>
+          </div>
 
+          <!-- 3. Child -->
+          <div class="member-button-container mt-auto">
             <a class="btn btn-sm btn-main mt-2" href="{{ .Permalink }}">
               View Profile →
             </a>
           </div>
+
         </div>
       </div>
       <!-- end team member -->

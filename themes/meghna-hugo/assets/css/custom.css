@@ -29,39 +29,30 @@
 
 
 /* =================================== */
-/* Equal Height Team Card Fix (V2)     */
+/* Equal Height Team Card Fix (V3)     */
 /* =================================== */
 
-/* 1. Ensure the entire card fills the vertical space of its grid column. */
+/* 1. Ensure the card fills the vertical space and acts as a flex container. */
 .team-member {
   height: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Stacks children vertically */
+  padding: 15px; /* Add padding to the card itself */
 }
 
-/* 2. Target the text content area of the card.
-      This is the MOST IMPORTANT part. */
+/* 2. Target the main text content block. */
 .team-member .member-meta {
-  /* Make this block grow to fill any available space left by the photo. */
-  flex-grow: 1;
-
-  /* Turn THIS block into a flex container itself. */
-  display: flex;
-  flex-direction: column;
-  
-  /* Add some padding for better aesthetics */
-  padding: 15px; 
-}
-
-/* 3. Target the summary text paragraph. */
-.team-member .member-meta p {
-  /* This is the magic: tell the summary text to grow and take up all
-     the leftover space, pushing everything after it downwards. */
+  /* This tells the text block to grow and take up available space,
+     pushing the button container down. */
   flex-grow: 1;
 }
 
-/* 4. Optional: Style the button for consistency. */
-.team-member .btn {
-  /* Ensure the button doesn't shrink. */
-  flex-shrink: 0;
+/* 3. Target the button's container. 
+   The 'mt-auto' class in the HTML pushes it down, but we can add
+   styles here for alignment if needed, like text-align. */
+.member-button-container {
+  /* This ensures the button is at the very end of the vertical stack */
+  flex-shrink: 0; 
+  text-align: left; /* Or 'center' if you prefer */
+  padding-top: 1rem; /* Add some space above the button */
 }

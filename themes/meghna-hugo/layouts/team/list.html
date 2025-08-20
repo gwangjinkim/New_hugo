@@ -16,20 +16,16 @@
 
       {{ range .Pages.ByWeight }}
       <!-- team member -->
-      <div class="col-lg-3 col-md-6 col-12 wow fadeInDown" data-wow-duration="500ms">
-        <div class="team-member">
+      <div class="col-lg-3 col-md-6 col-12 wow fadeInDown d-flex" data-wow-duration="500ms">
+        <div class="team-member"> <!-- now a flex container because of d-flex -->
+
+          <!-- Child 1: The Photo -->
           <div class="member-photo">
-            <!-- member photo -->
             <a href="{{ .Permalink }}">
               {{ partial "image.html" (dict "Src" .Params.image_webp "Fallback" .Params.image "Alt" .Title "Class" "img-fluid lozad") }}
             </a>
-            <!-- member social profile -->
             <div class="mask">
               <ul class="list-inline">
-                
-                <!-- =================================== -->
-                <!-- START: UPDATED ICON LOGIC -->
-                <!-- =================================== -->
                 {{ range .Params.social }}
                 <li class="list-inline-item">
                   <a href="{{ .link | safeURL }}" class="social-icon-link">
@@ -38,10 +34,6 @@
                   </a>
                 </li>
                 {{ end }}
-                <!-- =================================== -->
-                <!-- END: UPDATED ICON LOGIC -->
-                <!-- =================================== -->
-
               </ul>
             </div>
           </div>
@@ -53,11 +45,15 @@
             <p>
               {{ .Summary | truncate 150 }}
             </p>
-              
+          </div>
+
+          <!-- button in own container -->
+          <div class="member-button-container mt-auto">
             <a class="btn btn-sm btn-main mt-2" href="{{ .Permalink }}">
               View Profile →
             </a>
           </div>
+
         </div>
       </div>
       <!-- end team member -->
