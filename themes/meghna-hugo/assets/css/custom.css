@@ -22,3 +22,35 @@
   /* This is the magic part: it makes the SVG take the color of its parent link */
   fill: currentColor; 
 }
+
+
+
+
+
+
+/* =================================== */
+/* Equal Height Team Card Fix          */
+/* =================================== */
+
+/* 1. Make sure the card container fills the full height of its grid column.
+   The parent '.row' is a flex container, so its children (the col-* divs)
+   are already the same height. This makes the card fill that space. */
+.team-member {
+  height: 100%;
+  
+  /* 2. Turn the card itself into a vertical flex container.
+     This allows us to control the space distribution of its children (photo and meta). */
+  display: flex;
+  flex-direction: column;
+}
+
+/* 3. Target the text content area of the card. */
+.team-member .member-meta {
+  /* 4. Tell this section to "grow" and take up any available extra vertical space.
+     This is the magic part that pushes the button to the bottom. */
+  flex-grow: 1;
+
+  /* 5. Also make THIS a flex container to align its own children. */
+  display: flex;
+  flex-direction: column;
+}
