@@ -29,42 +29,39 @@
 
 
 /* =================================== */
-/* Member Card Component Styling       */
+/* Member Card Component               */
 /* =================================== */
 
-/* This CSS is now ONLY for visual appearance.
-   The layout is handled by Bootstrap classes in the HTML. */
+/* 1. Make the grid column a flex container. 
+   This ensures its children can be stretched. */
+.d-flex {
+  display: flex !important;
+}
+
+/* 2. Style the card itself. */
 .member-card {
-  background-color: #2d3748; /* Dark slate color */
-  color: #a0aec0; /* Light gray text */
-  padding: 1.5rem; /* 24px padding */
-  border-radius: 0.5rem; /* Rounded corners */
-  width: 100%;
-}
-
-.member-card .member-meta h4 a {
-  color: #ffffff;
-  font-size: 1.25rem;
-}
-.member-card .member-meta h4 a:hover {
-  color: #4fd1c5; /* Teal hover */
-}
-.member-card .member-meta span {
-  font-size: 0.875rem;
-  color: #718096;
-}
-.member-card .member-meta p {
-  margin-top: 1rem;
-  font-size: 1rem;
-}
-
-.member-card .btn {
-  border: 1px solid #718096;
+  /* --- Visuals --- */
+  background-color: #2d3748;
   color: #a0aec0;
-  transition: all 0.2s ease-in-out;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  
+  /* --- Layout --- */
+  /* This forces the card to be a vertical flex container */
+  display: flex;
+  flex-direction: column;
 }
-.member-card .btn:hover {
-  background-color: #4fd1c5;
-  border-color: #4fd1c5;
-  color: #ffffff;
+
+/* 3. Make the main content block grow. */
+.member-card .member-meta {
+  /* This is the magic. It tells this div to take up ALL available
+     vertical space, pushing the button to the bottom. */
+  flex: 1 1 auto;
+}
+
+/* 4. Style the button container for good measure. */
+.member-card .member-button-container {
+  /* This prevents the button from shrinking if space is tight. */
+  flex-shrink: 0;
 }
