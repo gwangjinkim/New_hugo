@@ -1,5 +1,6 @@
 ---
 title: "Prof. Anjali Kusumbe"
+weight: 3
 date: 2025-08-01T11:02:00+02:00
 image_webp: "images/team/Anjali-Kusumbe.jpg"
 image: "images/team/Anjali-Kusumbe.jpg"

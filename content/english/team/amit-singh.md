@@ -1,5 +1,6 @@
 ---
 title: "Dr. Amit Singh"
+weight: 1
 date: 2025-08-01T11:00:00+02:00
 image_webp: "images/team/Amit.webp"
 image: "images/team/Amit.jpeg"

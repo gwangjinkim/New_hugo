@@ -1,5 +1,6 @@
 ---
 title: "Dr. Gwang Jin Kim"
+weight: 4
 date: 2025-08-01T11:03:00+02:00
 image_webp: "images/team/me-hamburg.webp"
 image: "images/team/me-hamburg.jpg"

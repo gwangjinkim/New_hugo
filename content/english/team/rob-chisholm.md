@@ -1,5 +1,6 @@
 ---
 title: "Rob Chisholm"
+weight: 2
 date: 2025-08-01T11:01:00+02:00
 image_webp: "images/team/Rob.webp"
 image: "images/team/Rob.jpeg"
