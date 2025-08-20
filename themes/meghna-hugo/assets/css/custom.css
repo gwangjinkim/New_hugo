@@ -32,27 +32,37 @@
 /* Member Card Component               */
 /* =================================== */
 
-/* 1. The main card container. This is the flexbox parent. */
+/* 1. The main card container. */
 .member-card {
   /* --- Visual Styling --- */
-  background-color: #2d3748; /* A dark slate color like your example */
-  color: #a0aec0; /* A light gray for the text */
-  padding: 1.5rem; /* 24px padding inside the card */
-  border-radius: 0.5rem; /* Slightly rounded corners */
-  width: 100%; /* Ensure it fills its column */
+  background-color: #2d3748;
+  color: #a0aec0;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
   
   /* --- Flexbox Layout --- */
-  height: 100%; /* This is crucial for the equal height effect */
+  /* This is the key: it allows the card to be stretched by its parent (.col-*) */
   display: flex;
-  flex-direction: column; /* Stack children vertically: photo, meta, button */
+  flex-direction: column;
 }
 
-/* 2. The text content block. */
+/* 2. The text content block. THIS IS THE CRITICAL CHANGE. */
 .member-card .member-meta {
-  /* This is the magic part: it grows to push the button down. */
+  /* Make THIS block a flex container as well. */
+  display: flex;
+  flex-direction: column;
+  
+  /* And make THIS block the one that grows to push the button down. */
   flex-grow: 1; 
-  padding-top: 1.5rem; /* Add space between photo and text */
+
+  padding-top: 1.5rem;
 }
+
+/* 
+  The rest of your CSS for h4, span, p, .btn, .member-photo etc. is correct and can remain the same.
+  The changes above are the only ones needed to fix the layout.
+*/}
 
 /* 3. Style the typography inside the card. */
 .member-card .member-meta h4 a {
