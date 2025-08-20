@@ -17,7 +17,7 @@
       {{ range .Pages.ByWeight }}
       <!-- team member -->
       <div class="col-lg-3 col-md-6 col-12 wow fadeInDown d-flex" data-wow-duration="500ms">
-        <div class="member-card">
+        <div class="member-card d-flex flex-column">
 
           <!-- 1. Child -->
           <div class="member-photo">
@@ -37,7 +37,7 @@
 
           <!-- 2. Child -->
           <!-- member name & designation -->
-          <div class="member-meta">
+          <div class="member-meta flex-grow-1">
             <h4 class="mb-0"><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
             <span>{{ .Params.designation | markdownify}}</span>
             <p>
@@ -46,11 +46,9 @@
           </div>
 
           <!-- 3. Child -->
-          <div class="member-button-container mt-auto">
-            <a class="btn btn-sm btn-main mt-2" href="{{ .Permalink }}">
+          <a class="btn btn-sm btn-main mt-auto" href="{{ .Permalink }}">
               View Profile →
-            </a>
-          </div>
+          </a>
 
         </div>
       </div>
