@@ -29,30 +29,68 @@
 
 
 /* =================================== */
-/* Equal Height Team Card Fix (V3)     */
+/* Member Card Component               */
 /* =================================== */
 
-/* 1. Ensure the card fills the vertical space and acts as a flex container. */
-.team-member {
-  height: 100%;
+/* 1. The main card container. This is the flexbox parent. */
+.member-card {
+  /* --- Visual Styling --- */
+  background-color: #2d3748; /* A dark slate color like your example */
+  color: #a0aec0; /* A light gray for the text */
+  padding: 1.5rem; /* 24px padding inside the card */
+  border-radius: 0.5rem; /* Slightly rounded corners */
+  width: 100%; /* Ensure it fills its column */
+  
+  /* --- Flexbox Layout --- */
+  height: 100%; /* This is crucial for the equal height effect */
   display: flex;
-  flex-direction: column; /* Stacks children vertically */
-  padding: 15px; /* Add padding to the card itself */
+  flex-direction: column; /* Stack children vertically: photo, meta, button */
 }
 
-/* 2. Target the main text content block. */
-.team-member .member-meta {
-  /* This tells the text block to grow and take up available space,
-     pushing the button container down. */
-  flex-grow: 1;
+/* 2. The text content block. */
+.member-card .member-meta {
+  /* This is the magic part: it grows to push the button down. */
+  flex-grow: 1; 
+  padding-top: 1.5rem; /* Add space between photo and text */
 }
 
-/* 3. Target the button's container. 
-   The 'mt-auto' class in the HTML pushes it down, but we can add
-   styles here for alignment if needed, like text-align. */
-.member-button-container {
-  /* This ensures the button is at the very end of the vertical stack */
-  flex-shrink: 0; 
-  text-align: left; /* Or 'center' if you prefer */
-  padding-top: 1rem; /* Add some space above the button */
+/* 3. Style the typography inside the card. */
+.member-card .member-meta h4 a {
+  color: #ffffff; /* White color for the name */
+  font-size: 1.25rem; /* Make the name larger */
+}
+.member-card .member-meta h4 a:hover {
+  color: #4fd1c5; /* A teal color on hover */
+}
+.member-card .member-meta span {
+  font-size: 0.875rem; /* Smaller text for the designation */
+  color: #718096; /* A slightly darker gray for the designation */
+}
+.member-card .member-meta p {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+/* 4. Style the button at the bottom. */
+.member-card .member-button-container .btn {
+  border: 1px solid #718096; /* Gray border */
+  color: #a0aec0; /* Gray text */
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  display: inline-block; /* Proper button behavior */
+  transition: all 0.2s ease-in-out;
+}
+.member-card .member-button-container .btn:hover {
+  background-color: #4fd1c5; /* Teal background on hover */
+  border-color: #4fd1c5;
+  color: #ffffff; /* White text on hover */
+}
+
+/* Optional: Style the photo if needed */
+.member-card .member-photo img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Makes the photo a perfect square */
+    object-fit: cover; /* Prevents stretching */
+    border-radius: 0.25rem; /* Match the card's border radius */
 }
