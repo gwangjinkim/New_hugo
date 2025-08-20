@@ -29,28 +29,39 @@
 
 
 /* =================================== */
-/* Equal Height Team Card Fix          */
+/* Equal Height Team Card Fix (V2)     */
 /* =================================== */
 
-/* 1. Make sure the card container fills the full height of its grid column.
-   The parent '.row' is a flex container, so its children (the col-* divs)
-   are already the same height. This makes the card fill that space. */
+/* 1. Ensure the entire card fills the vertical space of its grid column. */
 .team-member {
   height: 100%;
-  
-  /* 2. Turn the card itself into a vertical flex container.
-     This allows us to control the space distribution of its children (photo and meta). */
   display: flex;
   flex-direction: column;
 }
 
-/* 3. Target the text content area of the card. */
+/* 2. Target the text content area of the card.
+      This is the MOST IMPORTANT part. */
 .team-member .member-meta {
-  /* 4. Tell this section to "grow" and take up any available extra vertical space.
-     This is the magic part that pushes the button to the bottom. */
+  /* Make this block grow to fill any available space left by the photo. */
   flex-grow: 1;
 
-  /* 5. Also make THIS a flex container to align its own children. */
+  /* Turn THIS block into a flex container itself. */
   display: flex;
   flex-direction: column;
+  
+  /* Add some padding for better aesthetics */
+  padding: 15px; 
+}
+
+/* 3. Target the summary text paragraph. */
+.team-member .member-meta p {
+  /* This is the magic: tell the summary text to grow and take up all
+     the leftover space, pushing everything after it downwards. */
+  flex-grow: 1;
+}
+
+/* 4. Optional: Style the button for consistency. */
+.team-member .btn {
+  /* Ensure the button doesn't shrink. */
+  flex-shrink: 0;
 }
