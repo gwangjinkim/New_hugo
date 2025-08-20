@@ -29,78 +29,42 @@
 
 
 /* =================================== */
-/* Member Card Component               */
+/* Member Card Component Styling       */
 /* =================================== */
 
-/* 1. The main card container. */
+/* This CSS is now ONLY for visual appearance.
+   The layout is handled by Bootstrap classes in the HTML. */
 .member-card {
-  /* --- Visual Styling --- */
-  background-color: #2d3748;
-  color: #a0aec0;
-  padding: 1.5rem;
-  border-radius: 0.5rem;
+  background-color: #2d3748; /* Dark slate color */
+  color: #a0aec0; /* Light gray text */
+  padding: 1.5rem; /* 24px padding */
+  border-radius: 0.5rem; /* Rounded corners */
   width: 100%;
-  
-  /* --- Flexbox Layout --- */
-  /* This is the key: it allows the card to be stretched by its parent (.col-*) */
-  display: flex;
-  flex-direction: column;
 }
 
-/* 2. The text content block. THIS IS THE CRITICAL CHANGE. */
-.member-card .member-meta {
-  /* Make THIS block a flex container as well. */
-  display: flex;
-  flex-direction: column;
-  
-  /* And make THIS block the one that grows to push the button down. */
-  flex-grow: 1; 
-
-  padding-top: 1.5rem;
-}
-
-/* 
-  The rest of your CSS for h4, span, p, .btn, .member-photo etc. is correct and can remain the same.
-  The changes above are the only ones needed to fix the layout.
-*/}
-
-/* 3. Style the typography inside the card. */
 .member-card .member-meta h4 a {
-  color: #ffffff; /* White color for the name */
-  font-size: 1.25rem; /* Make the name larger */
+  color: #ffffff;
+  font-size: 1.25rem;
 }
 .member-card .member-meta h4 a:hover {
-  color: #4fd1c5; /* A teal color on hover */
+  color: #4fd1c5; /* Teal hover */
 }
 .member-card .member-meta span {
-  font-size: 0.875rem; /* Smaller text for the designation */
-  color: #718096; /* A slightly darker gray for the designation */
+  font-size: 0.875rem;
+  color: #718096;
 }
 .member-card .member-meta p {
   margin-top: 1rem;
   font-size: 1rem;
 }
 
-/* 4. Style the button at the bottom. */
-.member-card .member-button-container .btn {
-  border: 1px solid #718096; /* Gray border */
-  color: #a0aec0; /* Gray text */
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  text-decoration: none;
-  display: inline-block; /* Proper button behavior */
+.member-card .btn {
+  border: 1px solid #718096;
+  color: #a0aec0;
   transition: all 0.2s ease-in-out;
 }
-.member-card .member-button-container .btn:hover {
-  background-color: #4fd1c5; /* Teal background on hover */
+.member-card .btn:hover {
+  background-color: #4fd1c5;
   border-color: #4fd1c5;
-  color: #ffffff; /* White text on hover */
-}
-
-/* Optional: Style the photo if needed */
-.member-card .member-photo img {
-    width: 100%;
-    aspect-ratio: 1 / 1; /* Makes the photo a perfect square */
-    object-fit: cover; /* Prevents stretching */
-    border-radius: 0.25rem; /* Match the card's border radius */
+  color: #ffffff;
 }
