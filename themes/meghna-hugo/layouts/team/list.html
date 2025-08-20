@@ -52,11 +52,11 @@
             <span>{{ .Params.designation | markdownify}}</span>
             <p>
               {{ .Summary | truncate 150 }}
-              <br>
-              <a class="btn btn-sm btn-main mt-2" href="{{ .Permalink }}">
-                View Profile →
-              </a>
             </p>
+              
+            <a class="btn btn-sm btn-main mt-2" href="{{ .Permalink }}">
+              View Profile →
+            </a>
           </div>
         </div>
       </div>
