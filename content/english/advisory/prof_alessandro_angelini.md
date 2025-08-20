@@ -1,5 +1,6 @@
 ---
 title: "Prof. Alessandro Angelini"
+weight: 2
 date: 2025-08-17T12:00:00+02:00
 image_webp: "images/team/prof_alessandro_angelini.webp"
 image: "images/team/prof_alessandro_angelini.jpg"

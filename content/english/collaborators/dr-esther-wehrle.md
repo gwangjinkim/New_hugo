@@ -1,5 +1,6 @@
 ---
 title: "Dr. Esther Wehrle"
+weight: 1
 date: 2025-08-01T12:05:00+02:00
 image_webp: "images/team/dr-esther-wehrle.webp"
 image: "images/team/dr-esther-wehrle.jpg"

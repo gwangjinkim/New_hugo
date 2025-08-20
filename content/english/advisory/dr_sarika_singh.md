@@ -1,5 +1,6 @@
 ---
 title: "Dr. Sarika Singh"
+weight: 7
 date: 2025-08-17T12:00:00+02:00
 image_webp: "images/team/dr_sarika_singh.webp"
 image: "images/team/dr_sarika_singh.jpg"     

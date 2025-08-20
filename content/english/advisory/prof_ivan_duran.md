@@ -1,5 +1,6 @@
 ---
 title: "Prof. Iván Durán"
+weight: 3
 date: 2025-08-17T12:00:00+02:00
 image_webp: "images/team/ivan_duran.webp" # Replace with actual image
 image: "images/team/ivan_duran.jpg"     # Replace with actual image

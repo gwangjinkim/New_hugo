@@ -1,5 +1,6 @@
 ---
 title: "Prof. Shubhendu Palei"
+weight: 9
 date: 2025-08-17T12:00:00+02:00
 image_webp: "images/team/prof_shubhendu_palei.webp"
 image: "images/team/prof_shubhendu_palei.jpg"     

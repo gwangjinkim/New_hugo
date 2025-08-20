@@ -1,5 +1,6 @@
 ---
 title: "Dr. Sagar Sagar"
+weight: 2
 date: 2025-08-01T12:05:00+02:00
 image_webp: "images/team/default-collaborator.webp"
 image: "images/team/default-collaborator.jpg"

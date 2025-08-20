@@ -1,5 +1,6 @@
 ---
 title: "Glenn Stanley"
+weight: 4
 date: 2025-08-17T12:00:00+02:00
 image_webp: "images/team/default-advisor.webp" # Replace with actual image
 image: "images/team/default-advisor.jpg"     # Replace with actual image

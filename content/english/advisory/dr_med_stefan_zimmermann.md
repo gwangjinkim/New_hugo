@@ -1,5 +1,6 @@
 ---
 title: "Dr. med. Stefan Zimmermann"
+weight: 5
 date: 2025-08-17T12:00:00+02:00
 image_webp: "images/team/default-advisor.webp"
 image: "images/team/default-advisor.jpg"     
