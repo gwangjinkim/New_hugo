@@ -83,3 +83,47 @@ html {
   border: 1px solid #718096;
   color: #a0aec0;
 }
+
+
+
+/* =================================== */
+/* Refined Button Styles               */
+/* =================================== */
+
+/* This targets all buttons with the .btn class inside our cards. */
+.member-card .btn {
+  /* --- Base Styling --- */
+  display: inline-block; /* Ensures proper block behavior */
+  text-decoration: none;
+  font-weight: 600; /* A slightly bolder font */
+  padding: 0.75rem 1.5rem; /* A slightly larger, more generous padding */
+  border-radius: 0.25rem;
+  transition: all 0.3s ease; /* A smoother transition */
+  cursor: pointer;
+
+  /* --- Default "Ghost Button" State --- */
+  background-color: transparent;
+  border: 1px solid #718096; /* Use the existing darker gray for the border */
+  color: #a0aec0; /* Use the existing light gray for the text */
+}
+
+/* --- Hover State --- */
+.member-card .btn:hover {
+  background-color: #1a2b47; /* Fill with the new Primary Blue */
+  border-color: #1a2b47; /* Make the border the same blue */
+  color: #ffffff; /* Use bright white text for maximum contrast */
+}
+
+/* 
+  Let's also apply this to other key buttons on the site for consistency,
+  like the "View All Post" button. You might need to adjust the selector.
+*/
+.view-all-post-button-class { /* Replace with the actual class of this button */
+  background-color: #1a2b47;
+  color: #ffffff;
+  /* ... add other base styles ... */
+}
+.view-all-post-button-class:hover {
+  background-color: #c5a57a; /* Use the Accent Gold on hover for a special touch */
+  color: #1a2b47; /* Use the dark blue for text for a high-contrast inverted effect */
+}
