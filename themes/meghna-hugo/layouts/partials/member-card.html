@@ -7,7 +7,7 @@
     <div class="mask">
       <ul class="list-inline">
         {{ range .Params.social }}
-          <li class="list-inline-item"><a href="{{ .link | safeURL }}" class="social-icon-link">{{ partial "icon.html" . }}</a></li>
+        <li class="list-inline-item"><a href="{{ .link | safeURL }}" class="social-icon-link">{{ partial "icon.html" . }}</a></li>
         {{ end }}
       </ul>
     </div>

@@ -2,8 +2,8 @@
 title: "Dr. med. Stefan Zimmermann"
 weight: 5
 date: 2025-08-17T12:00:00+02:00
-image_webp: "images/team/default-advisor.webp"
-image: "images/team/default-advisor.jpg"     
+image_webp: "images/team/dr_med_stefan_zimmermann.webp"
+image: "images/team/dr_med_stefan_zimmermann.jpg"     
 designation: "Scientific Advisor"
 social:
   - icon: "ti-linkedin"
