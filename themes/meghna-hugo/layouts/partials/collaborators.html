@@ -1,4 +1,4 @@
-{{ $collaborators := where .Site.RegularPages "Section" "collaborators" | sort by "Weight" }}
+{{ $collaborators := where .Site.RegularPages "Section" "collaborators"}}
 {{ if gt (len $collaborators) 0 }}
 <section id="collaborators" class="section">
   <div class="container">

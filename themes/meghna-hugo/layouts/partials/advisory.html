@@ -1,4 +1,4 @@
-{{ $advisors := where .Site.RegularPages "Section" "advisory-board" | sort by "Weight" }}
+{{ $advisors := where .Site.RegularPages "Section" "advisory"}}
 {{ if gt (len $advisors) 0 }}
 <section id="advisory-board" class="section">
   <div class="container">
