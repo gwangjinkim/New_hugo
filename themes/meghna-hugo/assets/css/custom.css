@@ -187,3 +187,54 @@ a:hover {
     background-color: #ffffff;
     color: #5B86A4; /* Use the new blue for the icon color on hover */
 }
+
+
+
+
+/* =================================== */
+/* Glow Effect Enhancements            */
+/* =================================== */
+
+/* --- 1. Glow for Section Title Accent --- */
+
+/* We'll add a subtle text shadow to the colored word in the title */
+.title h2 span.color {
+  color: #5B86A4;
+  /* Add a very soft glow using text-shadow */
+  text-shadow: 0 0 12px rgba(91, 134, 164, 0.5); /* The RGBA color is a semi-transparent version of our blue */
+}
+
+
+/* --- 2. Glow for the Main Buttons (e.g., "View All Post") --- */
+
+.btn-main {
+  background: #5B86A4;
+  /* Add a glow using box-shadow */
+  box-shadow: 0 0 15px rgba(91, 134, 164, 0.4);
+  transition: all 0.3s ease; /* Ensure the transition includes the shadow */
+}
+
+/* Make the glow more intense on hover */
+.btn-main:hover {
+  background: #6a95b5; /* A slightly lighter blue on hover to enhance the glow */
+  box-shadow: 0 0 25px rgba(91, 134, 164, 0.7);
+}
+
+
+/* --- 3. Glow for Member Card Buttons on Hover --- */
+
+.member-card .btn:hover {
+  background-color: #5B86A4;
+  border-color: #5B86A4;
+  color: #ffffff;
+  /* Add the glow effect on hover */
+  box-shadow: 0 0 18px rgba(91, 134, 164, 0.6);
+}
+
+/* --- 4. Glow for the Underline Border --- */
+/* We add a shadow to the ::before pseudo-element that creates the bar */
+.border-meghna:before {
+  background-color: #5B86A4;
+  /* Add the glow effect */
+  box-shadow: 0 0 12px rgba(91, 134, 164, 0.7);
+}
