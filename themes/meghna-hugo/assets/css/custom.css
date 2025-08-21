@@ -29,39 +29,48 @@
 
 
 /* =================================== */
-/* Member Card Component               */
+/* Member Card OVERRIDE                */
 /* =================================== */
 
-/* 1. Make the grid column a flex container. 
-   This ensures its children can be stretched. */
+/* 1. Ensure the column is a flex container */
 .d-flex {
   display: flex !important;
 }
 
-/* 2. Style the card itself. */
+/* 2. Style the card and force it into a flex layout */
 .member-card {
-  /* --- Visuals --- */
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important; /* Stack children vertically */
+  
   background-color: #2d3748;
   color: #a0aec0;
   padding: 1.5rem;
   border-radius: 0.5rem;
-  width: 100%;
-  
-  /* --- Layout --- */
-  /* This forces the card to be a vertical flex container */
-  display: flex;
-  flex-direction: column;
 }
 
-/* 3. Make the main content block grow. */
-.member-card .member-meta {
-  /* This is the magic. It tells this div to take up ALL available
-     vertical space, pushing the button to the bottom. */
-  flex: 1 1 auto;
+/* 3. Force the summary paragraph to grow and fill empty space */
+.member-card .member-summary {
+  flex-grow: 1 !important; /* The !important rule is key */
+  margin-top: 1rem;
 }
 
-/* 4. Style the button container for good measure. */
+/* 4. Ensure the button container does not shrink */
 .member-card .member-button-container {
-  /* This prevents the button from shrinking if space is tight. */
-  flex-shrink: 0;
+  flex-shrink: 0 !important;
+  margin-top: auto !important; /* 'margin-top: auto' is the strongest way to push it down */
+}
+
+/* --- Typography and other styles --- */
+.member-card .member-meta h4 a {
+  color: #ffffff;
+  font-size: 1.25rem;
+}
+.member-card .member-meta span {
+  font-size: 0.875rem;
+  color: #718096;
+}
+.member-card .btn {
+  border: 1px solid #718096;
+  color: #a0aec0;
 }

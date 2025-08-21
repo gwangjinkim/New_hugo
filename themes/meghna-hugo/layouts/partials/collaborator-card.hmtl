@@ -1,0 +1,18 @@
+<!-- layouts/partials/collaborator-card.html -->
+<div class="member-card d-flex flex-column">
+  <div class="member-logo-container">
+    {{ partial "image.html" (dict "Src" .Params.logo_webp "Fallback" .Params.logo "Alt" (printf "%s Logo" .Title) "Class" "member-logo") }}
+  </div>
+  <div class="member-photo">
+    <a href="{{ .Permalink }}">
+     {{ partial "image.html" (dict "Src" .Params.image_webp "Fallback" .Params.image "Alt" .Title "Class" "img-fluid") }}
+    </a>
+    <!-- ... mask with social icons ... -->
+  </div>
+  <div class="member-meta flex-grow-1">
+    <h4 class="mb-0"><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+    <span>{{ .Params.designation | markdownify}}</span>
+    <p>{{ .Summary | truncate 150 }}</p>
+  </div>
+  <a class="btn btn-sm btn-main mt-auto" href="{{ .Permalink }}">View Profile →</a>
+</div>

@@ -4,7 +4,7 @@ weight: 4
 date: 2025-08-01T11:03:00+02:00
 image_webp: "images/team/me-hamburg.webp"
 image: "images/team/me-hamburg.jpg"
-designation: "COO"
+designation: "Chief Operating Officer"
 social:
   - icon: "ti-linkedin"
     link: "https://www.linkedin.com/in/gwangjin/"

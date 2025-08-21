@@ -4,7 +4,7 @@ weight: 1
 date: 2025-08-01T11:00:00+02:00
 image_webp: "images/team/Amit.webp"
 image: "images/team/Amit.jpeg"
-designation: "CEO/Founder"
+designation: "Founder&CEO"
 social:
   - icon: "ti-linkedin"
     link: "https://www.linkedin.com/in/amit-singh-63373417/"

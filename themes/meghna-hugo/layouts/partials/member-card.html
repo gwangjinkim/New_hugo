@@ -1,0 +1,21 @@
+<!-- layouts/partials/member-card.html -->
+<div class="member-card d-flex flex-column">
+  <div class="member-photo">
+    <a href="{{ .Permalink }}">
+      {{ partial "image.html" (dict "Src" .Params.image_webp "Fallback" .Params.image "Alt" .Title "Class" "img-fluid") }}
+    </a>
+    <div class="mask">
+      <ul class="list-inline">
+        {{ range .Params.social }}
+          <li class="list-inline-item"><a href="{{ .link | safeURL }}" class="social-icon-link">{{ partial "icon.html" . }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+  <div class="member-meta flex-grow-1">
+    <h4 class="mb-0"><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+    <span>{{ .Params.designation | markdownify}}</span>
+    <p>{{ .Summary | truncate 150 }}</p>
+  </div>
+  <a class="btn btn-sm btn-main mt-auto" href="{{ .Permalink }}">View Profile →</a>
+</div>
