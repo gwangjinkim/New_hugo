@@ -1,5 +1,14 @@
 /* static/css/custom.css */
 
+
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
 /* Style the link that contains a social icon */
 .social-icon-link {
   /* Use the text color of the theme by default */
