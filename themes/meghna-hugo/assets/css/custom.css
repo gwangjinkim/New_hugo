@@ -127,3 +127,63 @@ html {
   background-color: #c5a57a; /* Use the Accent Gold on hover for a special touch */
   color: #1a2b47; /* Use the dark blue for text for a high-contrast inverted effect */
 }
+
+
+
+
+/* =================================== */
+/* Nimverta Custom Color Palette Override */
+/* =================================== */
+
+/* --- 1. Accent Color for Titles and Links --- */
+
+/* This targets the colored word in titles like "Our Team" */
+.title h2 span {
+  color: #5B86A4;
+}
+
+/* This targets the hover color for most links */
+a:focus,
+a:hover {
+  color: #5B86A4;
+}
+
+/* This targets the little underline bar beneath titles */
+.border-meghna:before {
+  background-color: #5B86A4;
+}
+
+
+/* --- 2. Button Styles --- */
+
+/* This targets the main, solid-colored buttons like "View All Post" */
+.btn-main {
+  background: #5B86A4;
+}
+.btn-main:hover {
+  /* A slightly darker shade for a subtle hover effect */
+  background: #4a6b84; 
+}
+
+/* This targets the hover state of transparent buttons like "Read more" */
+.btn-transparent:hover,
+.btn-transparent:focus {
+  background-color: #5B86A4;
+  border-color: #5B86A4;
+}
+
+
+/* --- 3. Member Card Button Override --- */
+/* This ensures the "View Profile" button uses the new palette */
+.member-card .btn:hover {
+  background-color: #5B86A4;
+  border-color: #5B86A4;
+  color: #ffffff;
+}
+
+/* --- 4. Social Icon Hover on Team Cards --- */
+/* This targets the hover state of social icons in the photo mask */
+.member-photo .mask ul li a:hover {
+    background-color: #ffffff;
+    color: #5B86A4; /* Use the new blue for the icon color on hover */
+}
