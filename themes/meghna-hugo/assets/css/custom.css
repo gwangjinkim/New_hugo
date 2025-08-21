@@ -238,3 +238,90 @@ a:hover {
   /* Add the glow effect */
   box-shadow: 0 0 12px rgba(91, 134, 164, 0.7);
 }
+
+
+
+/* ================================================================= */
+/* Contact Form & Details Styling Override                           */
+/* ================================================================= */
+
+/* 1. Style the main section titles for consistency. */
+.contact-us .title h3,
+.contact-us .title h2 {
+  color: #ffffff; /* White title text */
+}
+
+
+/* 2. Style the "Contact Details" heading on the left. */
+.contact-info h3 {
+  color: #ffffff; /* White text for the heading */
+  font-size: 1.75rem; /* Make it a bit larger */
+  margin-bottom: 1.5rem;
+}
+
+
+/* 3. Style the informational text and contact items. */
+.contact-info p,
+.con-info {
+  color: #a0aec0; /* Light gray text for readability */
+  font-size: 1rem;
+}
+
+/* Style the icons next to the contact details. */
+.con-info i {
+  color: #5B86A4; /* Use our primary blue for the icons */
+  margin-right: 0.75rem; /* Add some space between the icon and the text */
+  font-size: 1.25rem;
+}
+
+
+/* 4. Style the form input fields and the textarea. */
+.form-meghna .form-control {
+  background-color: #2d3748; /* Dark slate background to match cards */
+  border: 1px solid #4a5568; /* A subtle, lighter gray border */
+  color: #e2e8f0;           /* A brighter text color for user input */
+  border-radius: 0.25rem;    /* Softly rounded corners */
+  padding: 0.75rem 1rem;     /* Comfortable padding */
+  transition: all 0.3s ease; /* Smooth transition for the focus effect */
+}
+
+
+/* 5. Style the placeholder text to be less prominent. */
+.form-meghna .form-control::placeholder {
+  color: #718096; /* A muted gray for placeholder text */
+}
+
+
+/* 6. Create the "glow" effect when a user clicks into a field. */
+.form-meghna .form-control:focus {
+  border-color: #5B86A4; /* Our primary blue for the border on focus */
+  box-shadow: 0 0 15px rgba(91, 134, 164, 0.4); /* The blue glow effect */
+  outline: none; /* Remove the default browser outline */
+}
+
+
+/* 7. Style the main submit button. */
+#contact-submit {
+  /* --- Base Styling --- */
+  background: #5B86A4 !important; /* Use our blue, !important to override theme defaults */
+  border: 1px solid #5B86A4 !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 12px 0;
+  width: 100%;
+  border-radius: 0.25rem; /* Match the input fields */
+  
+  /* --- Glow Effect --- */
+  box-shadow: 0 0 15px rgba(91, 134, 164, 0.4);
+  transition: all 0.3s ease;
+}
+
+
+/* 8. Style the submit button's hover state for interactivity. */
+#contact-submit:hover {
+  background: #6a95b5 !important; /* A slightly lighter blue on hover */
+  border-color: #6a95b5 !important;
+  box-shadow: 0 0 25px rgba(91, 134, 164, 0.7); /* A more intense glow on hover */
+}
