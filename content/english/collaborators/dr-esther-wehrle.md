@@ -6,7 +6,7 @@ image_webp: "images/team/dr_wehrle_esther.webp"
 image: "images/team/dr_wehrle_esther.jpg"
 logo_webp: "images/team/innovation-lab-logo.webp" 
 logo: "images/team/innovation-lab-logo.png" 
-designation: "Research Partner, University of Science"
+designation: "Research Collaborator, AO Davos"
 social:
     - icon: "ti-world"
       link: "#"

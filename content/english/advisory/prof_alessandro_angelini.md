@@ -4,7 +4,6 @@ weight: 2
 date: 2025-08-17T12:00:00+02:00
 image_webp: "images/team/prof_alessandro_angelini.webp"
 image: "images/team/prof_alessandro_angelini.jpg"
-designation: "Scientific Advisor"
 social:
   - icon: "ti-linkedin"
     link: "https://www.linkedin.com/in/alessandro-angelini-58787b38/"

@@ -4,7 +4,7 @@ weight: 6
 date: 2025-08-17T12:00:00+02:00
 image_webp: "images/team/prof_lothar_seefried.webp"
 image: "images/team/prof_lothar_seefried.jpg"     
-designation: "Scientific Advisor"
+#designation: "Scientific Advisor"
 social:
   - icon: "ti-linkedin"
     link: "#"
